@@ -1,0 +1,17 @@
+# kubeadm init --apiserver-advertise-address=10.25.96.3 --pod-network-cidr=192.168.0.0/16 --apiserver-cert-extra-sans 45.76.52.125
+
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: ClusterConfiguration
+kubernetesVersion: v1.18.8
+networking:
+  podSubnet: 192.168.0.0/16
+apiServer:
+  extraArgs:
+    advertise-address: 10.25.96.3
+  certSans:
+  - "45.76.52.125"
+kubeProxy:
+  config:
+    featureGates:
+      SupportIPVSProxyMode: true
+    mode: ipvs

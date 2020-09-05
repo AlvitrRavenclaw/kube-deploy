@@ -1,0 +1,2 @@
+persistence.:
+  storageClassName: nfs-master

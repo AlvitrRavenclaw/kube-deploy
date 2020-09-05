@@ -1,0 +1,9 @@
+alertmanager:
+  persistentVolume:
+    storageClass: nfs-master
+pushgateway:
+  persistentVolume:
+    storageClass: nfs-master
+server:
+  persistentVolume:
+    storageClass: nfs-master
