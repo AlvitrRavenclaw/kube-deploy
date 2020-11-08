@@ -1,8 +1,0 @@
-nfs:
-  server: 10.25.96.4
-  path: /data
-storageClass:
-  name: nfs-worker
-  accessModes: ReadWriteMany
-nodeSelecter:
-  kubernetes.io/hostname: worker
